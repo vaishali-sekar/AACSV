@@ -30,7 +30,7 @@ jobs:
 
     - name: Build and tag Docker image
       run: |
-        docker build -t $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest .
+        docker build -t $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest -f Dockerrfile .
 
     - name: Push Docker image to ACR
       run: |
