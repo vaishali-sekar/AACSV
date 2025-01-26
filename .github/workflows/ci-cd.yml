@@ -30,21 +30,21 @@ jobs:
 
     - name: Build and tag Docker image
       run: |
-        docker build -t $ACR_NAME.azurecr.io/fastapi-app:latest .
+        docker build -t $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest .
 
     - name: Push Docker image to ACR
       run: |
-        docker push $ACR_NAME.azurecr.io/fastapi-app:latest
+        docker push $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest
 
     - name: Create or update Azure Web App with the ACR image
       run: |
         az webapp create --name $AZURE_WEBAPP_NAME \
                          --resource-group $AZURE_RESOURCE_GROUP \
                          --plan $AZURE_PLAN \
-                         --deployment-container-image-name $ACR_NAME.azurecr.io/fastapi-app:latest || \
+                         --deployment-container-image-name $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest || \
         az webapp config container set --name $AZURE_WEBAPP_NAME \
                                        --resource-group $AZURE_RESOURCE_GROUP \
-                                       --docker-custom-image-name $ACR_NAME.azurecr.io/fastapi-app:latest \
+                                       --docker-custom-image-name $ACR_NAME.azurecr.io/bangalore-house-price-fastapi-app:latest \
                                        --docker-registry-server-url https://$ACR_NAME.azurecr.io
 
     - name: Restart Azure Web App
