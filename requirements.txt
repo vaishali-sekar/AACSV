@@ -11,4 +11,4 @@ fastapi
 uvicorn
 jinja2
 numpy
-python multipart
+python-multipart
