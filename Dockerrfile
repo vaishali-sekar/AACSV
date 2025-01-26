@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+# Base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY bangalore_styleapp.py /app/
+COPY best_model.pkl /app/
+COPY scaler.pkl /app/
+COPY features.pkl /app/
+
+# Copy static and templates directories
+COPY static /app/static
+COPY templates /app/templates
+
+# Expose the port FastAPI will run on
+EXPOSE 8000
+
+# Command to run the FastAPI app
+CMD ["uvicorn", "bangalore_styleapp:app", "--host", "0.0.0.0", "--port", "8000"]
+=======
+# Base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY bangalore_styleapp.py /app/
+COPY best_model.pkl /app/
+COPY scaler.pkl /app/
+COPY features.pkl /app/
+
+# Copy static and templates directories
+COPY static /app/static
+COPY templates /app/templates
+
+# Expose the port FastAPI will run on
+EXPOSE 8000
+
+# Command to run the FastAPI app
+CMD ["uvicorn", "bangalore_styleapp:app", "--host", "0.0.0.0", "--port", "8000"]
+>>>>>>> d7e64b796ce19bc24494cf120a3bbe8eb59697e3
