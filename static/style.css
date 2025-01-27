@@ -6,7 +6,7 @@ body {
     background-image: url("bgpic.jpeg"); /* Corrected Path */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents tiling of the image */
-    background-position: center; /* Centers the image in the viewport */
+    background-position: left; /* Centers the image in the viewport */
     position: relative;
 }
 
