@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    background-image: url("pic2.jpg"); /* Corrected Path */
+    background-image: url("Bangalorepic2.jpg"); /* Corrected Path */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents tiling of the image */
     background-position: left; /* Centers the image in the viewport */
