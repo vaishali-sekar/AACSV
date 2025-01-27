@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat; /* Prevents tiling of the image */
     background-position: center; /* Centers the image in the viewport */
     position: relative;
+    filter: blur(5px); /* Adds a slight blur effect */
 }
 
 .container {
